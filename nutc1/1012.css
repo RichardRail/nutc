@@ -1,0 +1,25 @@
+/*a{
+    text-align: right;
+}*/
+/*div{
+    text-align: left;
+}*/
+
+
+th{
+    color: #fff;
+    background-color:#000;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;  
+}
+table{
+    border-collapse:collapse;
+    border-width: 1px;
+    border-style: solid;
+}
+td{
+    text-align: left;
+    padding: 8px;
+    /*letter-spacing: 2px;*/   
+}
