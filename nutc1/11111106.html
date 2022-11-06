@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>1106作業</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/54e0bb908b.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .test1{
+                padding-left: 5%; 
+                padding-right: 5%;
+            }
+            .test2{
+                padding-left: 5%; 
+                padding-right: 5%;
+                margin-top: 100%;
+                margin-bottom: 0%;
+            }
+            .a1{
+                float: left;
+                width: 68%;
+                background-color: #f8f9fa;
+            }
+            .a2{
+                float: right;
+                width: 28%;
+                background-color: #f8f9fa;
+            }            
+        </style>
+        <body>
+            <!--頂部-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-rss"></i><b>部落格排版</b></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div style="margin-left: auto;" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                  </ul>
+                </div>
+            </nav>
+            <div class="test1">
+                <!--目錄-->
+                <nav>
+                    <ol class="breadcrumb" style="background-color: white;">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Library</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    </ol>
+                </nav>
+                <!--標題+作者、時間-->
+                <h1 class="text-info"><b>部落格標題</b></h1>
+                <div>
+                    <small>
+                        <span class="mr-3"><i class="fa fa-user text-info"></i>作者</span>
+                        <span class="mr-3"><i class="fa-regular fa-clock text-info"></i>2019-06-05 12:00:00</span>
+                        <span class="mr-3"><i class="fa fa-tag text-info"></i>blog</span>
+                    </small>
+                </div>
+                <!--主要內容區-->
+                <div style="margin-top: 3%;">
+                    <!--左側內容-->
+                    <div class="a1 border">
+                        <div style="margin-left: 3%; margin-top: 2%; margin-right: 3%;">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at venenatis nisi. Duis leo mi, gravida in pretium id, egestas ac quam. Donec ac pulvinar massa, a fermentum massa. Morbi eu tempus nunc. Duis finibus tortor in tincidunt tempus. Curabitur maximus elit sed lorem tempus consectetur. Nulla tincidunt neque dui, at placerat lectus volutpat mollis. Nunc eget interdum lacus, in molestie nunc. Cras neque ipsum, dignissim et viverra in, ornare ut arcu. Fusce euismod fringilla eros ac elementum. Maecenas tortor erat, consequat vitae dolor id, ornare vestibulum nibh. Suspendisse potenti. Aliquam porttitor, nisi in maximus suscipit, felis diam suscipit nunc, quis imperdiet leo leo id diam. Pellentesque malesuada mi quis consectetur iaculis.</p>
+                            <h2>副標題</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at venenatis nisi. Duis leo mi, gravida in pretium id, egestas ac quam. Donec ac pulvinar massa, a fermentum massa. Morbi eu tempus nunc. Duis finibus tortor in tincidunt tempus. Curabitur maximus elit sed lorem tempus consectetur. Nulla tincidunt neque dui, at placerat lectus volutpat mollis. Nunc eget interdum lacus, in molestie nunc. Cras neque ipsum, dignissim et viverra in, ornare ut arcu. Fusce euismod fringilla eros ac elementum. Maecenas tortor erat, consequat vitae dolor id, ornare vestibulum nibh. Suspendisse potenti. Aliquam porttitor, nisi in maximus suscipit, felis diam suscipit nunc, quis imperdiet leo leo id diam. Pellentesque malesuada mi quis consectetur iaculis.</p>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at venenatis nisi. Duis leo mi, gravida in pretium id, egestas ac quam. Donec ac pulvinar massa, a fermentum massa. Morbi eu tempus nunc. Duis finibus tortor in tincidunt tempus. Curabitur maximus elit sed lorem tempus consectetur. Nulla tincidunt neque dui, at placerat lectus volutpat mollis. Nunc eget interdum lacus, in molestie nunc. Cras neque ipsum, dignissim et viverra in, ornare ut arcu. Fusce euismod fringilla eros ac elementum. Maecenas tortor erat, consequat vitae dolor id, ornare vestibulum nibh. Suspendisse potenti. Aliquam porttitor, nisi in maximus suscipit, felis diam suscipit nunc, quis imperdiet leo leo id diam. Pellentesque malesuada mi quis consectetur iaculis.</li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at venenatis nisi. Duis leo mi, gravida in pretium id, egestas ac quam. Donec ac pulvinar massa, a fermentum massa. Morbi eu tempus nunc. Duis finibus tortor in tincidunt tempus. Curabitur maximus elit sed lorem tempus consectetur. Nulla tincidunt neque dui, at placerat lectus volutpat mollis. Nunc eget interdum lacus, in molestie nunc. Cras neque ipsum, dignissim et viverra in, ornare ut arcu. Fusce euismod fringilla eros ac elementum. Maecenas tortor erat, consequat vitae dolor id, ornare vestibulum nibh. Suspendisse potenti. Aliquam porttitor, nisi in maximus suscipit, felis diam suscipit nunc, quis imperdiet leo leo id diam. Pellentesque malesuada mi quis consectetur iaculis.</li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at venenatis nisi. Duis leo mi, gravida in pretium id, egestas ac quam. Donec ac pulvinar massa, a fermentum massa. Morbi eu tempus nunc. Duis finibus tortor in tincidunt tempus. Curabitur maximus elit sed lorem tempus consectetur. Nulla tincidunt neque dui, at placerat lectus volutpat mollis. Nunc eget interdum lacus, in molestie nunc. Cras neque ipsum, dignissim et viverra in, ornare ut arcu. Fusce euismod fringilla eros ac elementum. Maecenas tortor erat, consequat vitae dolor id, ornare vestibulum nibh. Suspendisse potenti. Aliquam porttitor, nisi in maximus suscipit, felis diam suscipit nunc, quis imperdiet leo leo id diam. Pellentesque malesuada mi quis consectetur iaculis.</li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at venenatis nisi. Duis leo mi, gravida in pretium id, egestas ac quam. Donec ac pulvinar massa, a fermentum massa. Morbi eu tempus nunc. Duis finibus tortor in tincidunt tempus. Curabitur maximus elit sed lorem tempus consectetur. Nulla tincidunt neque dui, at placerat lectus volutpat mollis. Nunc eget interdum lacus, in molestie nunc. Cras neque ipsum, dignissim et viverra in, ornare ut arcu. Fusce euismod fringilla eros ac elementum. Maecenas tortor erat, consequat vitae dolor id, ornare vestibulum nibh. Suspendisse potenti. Aliquam porttitor, nisi in maximus suscipit, felis diam suscipit nunc, quis imperdiet leo leo id diam. Pellentesque malesuada mi quis consectetur iaculis.</li>
+                            </ul>
+                            <img src="./38img.png"  width="100%">
+                        </div>
+                        <!--留言板-->
+                        <div class="border" style="margin-top: 5%; margin-bottom: 5%; margin-right: 3%; margin-left: 3%;">
+                            <div style="height: 50px; background-color:#f8f9fa">
+                                <p style="margin-top: 1%; margin-right: 2%; margin-left: 3%;"><b>留言板</b></p>
+                            </div>
+                            <div style="background-color:white;">
+                                <div class="media" style="margin-left: 3%; margin-right: 3%;">
+                                    <img src="./38img.png" class="mr-3" style="width:100px; height: 100px;">
+                                    <div class="media-body">
+                                      <h5 class="mt-0"><b>留言內容</b></h5>
+                                      <textarea style="height: 100px; width: 100%;"></textarea>
+                                      <center><h6>提交</h6></center>
+                                    </div>
+                                </div>
+                                <!--已留言者-->
+                                <div class="media" style="margin-left: 3%; margin-right: 3%;">
+                                    <img src="./38img.png" class="mr-3" style="width:100px; height: 100px;">
+                                    <div class="media-body">
+                                      <h5 class="mt-0">Media heading</h5>
+                                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed tincidunt neque. Donec elit nisi, gravida nec dapibus ut, malesuada vel nisl. Vestibulum sit amet felis urna. Donec nec nisi quam. Nullam tempor est augue, in aliquam est euismod sit amet. Proin eget urna vel diam interdum pulvinar. Nunc ut arcu diam. Donec non elementum orci.</p>
+                                    </div>
+                                </div>
+                                <div class="media" style="margin-left: 3%; margin-right: 3%;">
+                                    <img src="./38img.png" class="mr-3" style="width:100px; height: 100px;">
+                                    <div class="media-body">
+                                      <h5 class="mt-0">Media heading</h5>
+                                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed tincidunt neque. Donec elit nisi, gravida nec dapibus ut, malesuada vel nisl. Vestibulum sit amet felis urna. Donec nec nisi quam. Nullam tempor est augue, in aliquam est euismod sit amet. Proin eget urna vel diam interdum pulvinar. Nunc ut arcu diam. Donec non elementum orci.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--右側內容-->
+                    <div class="a2 border">
+                        <h2><b>Tags</b></h2>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                        <span class="badge badge-info"><i class="fa fa-tag text-light"></i>Info</span>
+                    </div>
+                </div>
+            </div>
+            <!--版權宣告-->
+            <div class="test2">
+                <div style="margin-bottom: 5%; margin-top: 165%;">
+                    <div class="bg-light p-5 border">
+                        <div>
+                            版權宣告
+                            <span style="float: right;">
+                                <i class="fa-brands fa-facebook text-info"></i>
+                                <i class="fa-brands fa-twitter text-info"></i>
+                                <i class="fa-brands fa-qq text-info"></i>
+                                <i class="fa-brands fa-line text-info"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </head>
+</html>
