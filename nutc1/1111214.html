@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>1214作業</title>
+        <center><h1 style="font-family: 微軟正黑體 !important;"><b>第九回作業</b></h1></center>
+        <center><h4><a href="https://richardrail.github.io/nutc/" style="font-size: 20px;">回到首頁</a></h4></center>
+        <hr>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/54e0bb908b.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <body>
+            <center><table border="3" id="btr"> <!--記得取消border-->
+                <tr>
+                    <td colspan="5" style="background-color:black; width: 1200px;"><span style="color:white;"><center>新增商品</center></span></td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="margin-top: 5px; margin-bottom: 5px; padding-top: 5px; padding-bottom: 5px;"><input type="text" name="texta1" id="texta1" placeholder="商品名" style=" margin-left: 20px; margin-right: 20px;"><input type="text" name="texta2" id="texta2" placeholder="商品價格" style="margin-right: 20px;"><input type="button" name="submit" value="新增" class="btn btn-primary" onclick="update();"></td>
+                </tr>
+                <!--tr>
+                    <td colspan="5" style="background-color:black;"><span style="color:white;"><center>商品列表</center></span></td>
+                </tr-->
+                <tr style="background-color:black;">
+                    <td><span style="color:white;"><center>功能</center></span></td>
+                    <td><span style="color:white;"><center>商品名稱</center></span></td>
+                    <td><span style="color:white;"><center>數量</center></span></td>
+                    <td><span style="color:white;"><center>單價</center></span></td>
+                    <td><span style="color:white;"><center>小計</center></span></td>
+                </tr>
+                <!--tr>
+                    <td><center><button type="button" class="btn btn-danger" style="margin-right: -150px; margin-left: -150px;" onclick="de()">刪除</button></center></td>
+                    <td><span></span></td>
+                    <td><center>
+                        <select style="margin-right: -150px; margin-left: -150px;" onchange="acc();">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </center></select>
+                    </span></td>
+                    <td><span></span></td>
+                    <td><span></span></td>
+                </tr-->
+            </table></center>
+            <center><h6 id="總和" style="margin-top: 15px;">總和:0元</h6></center>
+        </body>
+        <script>
+            i = 0
+            總和 = document.getElementById("總和");
+            總和數 = 0
+            function update(){
+                i = i + 1
+                商品名t = document.getElementById('texta1');
+                商品名 = 商品名t.value;
+                商品價格t = document.getElementById('texta2');
+                商品價格 = 商品價格t.value;
+                console.log(商品名)
+                console.log(商品價格)
+                console.log(i)
+                /*開始建立tr與td*/
+                /*td1*/
+                var 測試文字 = document.createElement("tr");
+                測試文字.id = "tr" + i
+                /*var str = document.createTextNode(" a ");*/
+                var str1 = document.createElement("td");
+                var strc1 = document.createElement("center");
+                var strb1 = document.createElement("button");
+                strb1.type="button"
+                strb1.class="btn btn-danger"
+                strb1.style="margin-right: -150px; margin-left: -150px; text-align:center;"
+                strb1.id = "trb" + i
+                var trbid = "trb" + i
+                strb1.onclick="de()"
+                var strs1 = document.createTextNode("刪除");
+                strb1.appendChild(strs1);
+                strc1.appendChild(strb1);
+                str1.appendChild(strc1);
+                /*td2*/
+                var str2 = document.createElement("td");
+                var strc2 = document.createElement("center");
+                var strb2 = document.createElement("span");
+                var strs2 = document.createTextNode(商品名);
+                strb2.appendChild(strs2);
+                strc2.appendChild(strb2);
+                str2.appendChild(strc2);
+                /*td3*/
+                var str3 = document.createElement("td");
+                var strc3 = document.createElement("center");
+                var strt3 = document.createElement("select");
+                strt3.style="margin-right: -150px; margin-left: -150px;"
+                strt3.id = "strtid" + i
+                strt3id = "strtid" + i
+                for(var o = 1;o<11;o++){
+                    var strto3 = document.createElement("option");
+                    var strtos3 = document.createTextNode(o);
+                    strto3.appendChild(strtos3);
+                    strto3.value = o
+                    strto3.id = "vid" + o
+                    strto3id = "vid" + o
+                    strt3.appendChild(strto3);
+                }
+                strc3.appendChild(strt3);
+                str3.appendChild(strc3);
+                /*td4*/
+                var str4 = document.createElement("td");
+                var strc4 = document.createElement("center");
+                var strb4 = document.createElement("span");
+                var strs4 = document.createTextNode(商品價格);
+                strb4.appendChild(strs4);
+                strc4.appendChild(strb4);
+                str4.appendChild(strc4);
+                /*td5*/
+                var str5 = document.createElement("td");
+                var strc5 = document.createElement("center");
+                var strb5 = document.createElement("span");
+                strb5.id = "strb5" + i
+                strb5id = "strb5" + i
+                var strs5 = document.createTextNode(商品價格);
+                strb5.appendChild(strs5);
+                strc5.appendChild(strb5);
+                str5.appendChild(strc5);
+                /*輸出*/
+                var btr = document.getElementById("btr");
+                btr.appendChild(測試文字);
+                測試文字.appendChild(str1);
+                測試文字.appendChild(str2);
+                測試文字.appendChild(str3);
+                測試文字.appendChild(str4);
+                測試文字.appendChild(str5);
+                /*總和*/
+                var 商品價格和 = document.getElementById(strb5id);
+                總和數 = parseInt(總和數) + parseInt(商品價格)
+                總和.innerHTML = "總和" + 總和數 + "元"
+                /*刪除*/
+                var trb = document.getElementById(trbid);
+                var trd = document.getElementById(測試文字.id);
+                trb.onclick = function(){
+                    trd.remove();
+                };
+                /*數量更新*/
+                var trb5 = document.getElementById(strb5id);
+                var trd5 = document.getElementById(strt3id);
+                trd5.onchange = function(){
+                    console.log("change")
+                    console.log(trd5.value)
+                    trb5.innerHTML = trd5.value * 商品價格
+                    strb5.value = trd5.value * 商品價格
+                    總和數 = parseInt(總和數) + ((trd5.value * 商品價格) - strb5.value)
+                    總和.innerHTML = "總和" + 總和數 + "元"
+                };      
+            }
+        </script>
+        <!--<script src="1214test.js"></script>-->
+    </head>
+</html>
