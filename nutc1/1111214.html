@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>1214作業</title>
-        <center><h1 style="font-family: 微軟正黑體 !important;"><b>沒有成功的第九回作業購物車</b></h1></center>
+        <center><h1 style="font-family: 微軟正黑體 !important;"><b>第九回作業</b></h1></center>
         <center><h4><a href="https://richardrail.github.io/nutc/" style="font-size: 20px;">回到首頁</a></h4></center>
         <hr>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -113,6 +113,9 @@
                 var str4 = document.createElement("td");
                 var strc4 = document.createElement("center");
                 var strb4 = document.createElement("span");
+                strb4.value = 商品價格
+                strb4.id = "strb4" + i
+                strb4id = "strb4" + i
                 var strs4 = document.createTextNode(商品價格);
                 strb4.appendChild(strs4);
                 strc4.appendChild(strb4);
@@ -121,6 +124,7 @@
                 var str5 = document.createElement("td");
                 var strc5 = document.createElement("center");
                 var strb5 = document.createElement("span");
+                var strb5v = 商品價格
                 strb5.id = "strb5" + i
                 strb5id = "strb5" + i
                 var strs5 = document.createTextNode(商品價格);
@@ -140,21 +144,31 @@
                 總和數 = parseInt(總和數) + parseInt(商品價格)
                 總和.innerHTML = "總和" + 總和數 + "元"
                 /*刪除*/
+                var trb5 = document.getElementById(strb5id);
+                var trb4 = document.getElementById(strb4id);
+                var trb3 = document.getElementById(strt3id);
                 var trb = document.getElementById(trbid);
                 var trd = document.getElementById(測試文字.id);
                 trb.onclick = function(){
                     trd.remove();
+                    總和數 = parseInt(總和數) - strb5v
+                    總和.innerHTML = "總和" + 總和數 + "元"
                 };
                 /*數量更新*/
-                var trb5 = document.getElementById(strb5id);
-                var trd5 = document.getElementById(strt3id);
-                trd5.onchange = function(){
+                trb3.onchange = function(){
                     console.log("change")
-                    console.log(trd5.value)
-                    trb5.innerHTML = trd5.value * 商品價格
-                    strb5.value = trd5.value * 商品價格
-                    總和數 = parseInt(總和數) + ((trd5.value * 商品價格) - strb5.value)
+                    console.log(trb3.value)
+                    console.log("舊" + trb5)
+                    trb5.innerHTML = trb3.value * trb4.value
+                    trb5.value = trb3.value * trb4.value
+                    console.log("舊的價格:" + strb5v)
+                    總和數 = parseInt(總和數) + ((trb3.value * trb4.value) - strb5v)
                     總和.innerHTML = "總和" + 總和數 + "元"
+                    console.log("總和:" + 總和)
+                    console.log("總和數" + 總和數)
+                    console.log("新" + trb5)
+                    strb5v = trb3.value * trb4.value
+                    console.log("新的價格:" + strb5v)
                 };      
             }
         </script>
