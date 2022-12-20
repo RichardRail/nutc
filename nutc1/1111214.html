@@ -57,7 +57,6 @@
             總和 = document.getElementById("總和");
             總和數 = 0
             function update(){
-                i = i + 1
                 商品名t = document.getElementById('texta1');
                 商品名 = 商品名t.value;
                 商品價格t = document.getElementById('texta2');
@@ -65,6 +64,10 @@
                 console.log(商品名)
                 console.log(商品價格)
                 console.log(i)
+                if (商品名 == "" && 商品價格 == "") return alert("無商品名與商品價格")
+                if (商品名 == "") return alert("無商品名")
+                if (商品價格 == "") return alert("無商品價格")
+                i = i + 1
                 /*開始建立tr與td*/
                 /*td1*/
                 var 測試文字 = document.createElement("tr");
