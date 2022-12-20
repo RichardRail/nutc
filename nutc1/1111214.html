@@ -78,7 +78,6 @@
                 strb1.style="margin-right: -150px; margin-left: -150px; text-align:center;"
                 strb1.id = "trb" + i
                 var trbid = "trb" + i
-                strb1.onclick="de()"
                 var strs1 = document.createTextNode("刪除");
                 strb1.appendChild(strs1);
                 strc1.appendChild(strb1);
@@ -150,9 +149,12 @@
                 var trb = document.getElementById(trbid);
                 var trd = document.getElementById(測試文字.id);
                 trb.onclick = function(){
-                    trd.remove();
-                    總和數 = parseInt(總和數) - strb5v
-                    總和.innerHTML = "總和" + 總和數 + "元"
+                    var 是否 = confirm("確定要刪除嗎？");
+                    if (是否){
+                        trd.remove();
+                        總和數 = parseInt(總和數) - strb5v
+                        總和.innerHTML = "總和" + 總和數 + "元"
+                    }
                 };
                 /*數量更新*/
                 trb3.onchange = function(){
